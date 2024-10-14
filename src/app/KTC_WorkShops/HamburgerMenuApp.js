@@ -83,7 +83,7 @@ export default function HamburgerMenu() {
                                 loading='lazy'
                                 quality={90}
                             />
-                            Self Care Tips
+                            Self Care Tips Today
                         </Link>
                     </li>
                     <li>
