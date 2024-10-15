@@ -176,7 +176,7 @@ const TeachingscontentD = () => {
                     className="bkgcontainer2"
                 >
                     <video autoPlay loop className='videobkg'>
-                        <source src="/webm/LessonBKG.webm" type="video/webm; codecs=vp9"/>
+                    <source src="/webm/GalleryversionD.webm" type="video/webm; codecs=vp9"/>
                     </video>
                 </motion.div>
                 <motion.div 

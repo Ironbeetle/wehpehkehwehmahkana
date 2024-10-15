@@ -210,7 +210,7 @@ const SelfCarecontentD = () => {
                     className="bkgcontainer2"
                 >
                     <video autoPlay loop className='videobkg2'>
-                        <source src="/webm/LessonBKG.webm" type="video/webm; codecs=vp9"/>
+                    <source src="/webm/GalleryversionD.webm" type="video/webm; codecs=vp9"/>
                     </video>
                 </motion.div>
                 <motion.div 

@@ -85,7 +85,7 @@ const GatheringvidsD = () => {
                             className="apptext" 
                             style={{textDecoration:'none',width:"100%", height:"100%"}}
                         >
-                            <h1>The Importance Of The Teachings</h1>
+                            <h1>The Good Life</h1>
                         </Link>
                     </div>
                     <div className="listitemapp">
