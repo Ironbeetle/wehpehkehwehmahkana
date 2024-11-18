@@ -25,15 +25,6 @@ const Gatheringsgallery = () => {
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-    let BKGSelector = () => {
-        if (width < 479) {
-            return "/webm/TeachBKGMobile.webm"
-        }else if (width > 480 && width < 1023){
-            return "/webm/TeachBKGTablet.webm"
-        }else {
-            return "/TradTeachBKG.webm"
-        }
-    }
     let Listtype = () => {
         if (width < 479) {
             return 'listitemT'

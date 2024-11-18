@@ -72,7 +72,7 @@ export default function LandcontentD()  {
                             <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                                 <div className='apptxtFrontW' style={{width:"100%"}}>
                                     <h2 className='topLayeritemSelect'>Fishing</h2>
-                                    <h3>Angleing</h3>
+                                    <h3>Angling</h3>
                                     <h3>Netting</h3>
                                 </div>
                                 <div className='apptxtFrontW' style={{width:"100%"}}>
@@ -304,7 +304,7 @@ export default function LandcontentD()  {
                             <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                                 <div className='apptxtFrontW' style={{width:"100%"}}>
                                     <h2 className='topLayeritemSelect'>Fishing</h2>
-                                    <h3>Angleing</h3>
+                                    <h3>Angling</h3>
                                     <h3>Netting</h3>
                                 </div>
                                 <div className='apptxtFrontW' style={{width:"100%"}}>
@@ -362,7 +362,7 @@ export default function LandcontentD()  {
                             <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                                 <div className='apptxtFrontW' style={{width:"100%"}}>
                                     <h2 className='topLayeritemSelect'>Fishing</h2>
-                                    <h3>Angleing</h3>
+                                    <h3>Angling</h3>
                                     <h3>Netting</h3>
                                 </div>
                                 <div className='apptxtFrontW' style={{width:"100%"}}>

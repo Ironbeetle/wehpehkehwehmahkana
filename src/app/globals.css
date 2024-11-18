@@ -371,7 +371,7 @@ button {
 
 .circlecontainteach{
   position: absolute;
-  width: 55%;
+  width: 60%;
   height: 82%;
   top: 3%;
   left:50%;
@@ -699,7 +699,7 @@ button {
   position: absolute;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 80%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -722,7 +722,7 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 20%;
   height: 100dvh;
   height: 100vh;
   margin: 0;
@@ -1432,6 +1432,7 @@ button {
   color: rgba(255, 255 ,255 , 0.8);
   text-align: center;
   text-shadow: #161616 1px 1px 8px;
+  text-decoration: none;
 }
 
 .apptxtFront > h1{
@@ -1648,6 +1649,16 @@ button {
   scrollbar-width: none;
   overflow-y: auto;
   
+}
+.listpanel{
+  width: 1105px;
+  height: 301px;
+  margin-bottom: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: whitesmoke;
+  overflow-x: hidden;
+  background-color: rgba(25, 25 ,25 , 0.4);
 }
 
 .listitem{

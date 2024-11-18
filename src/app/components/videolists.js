@@ -1,9 +1,5 @@
 
 
 export function Naturallaws(){
-    return(
-        <>
-        <p>Natural Laws</p>
-        </>
-    );
+    return <h1>list</h1>
 }
