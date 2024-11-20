@@ -7,7 +7,7 @@ export default function page() {
         return(
             <div className='row1fr1fr' style={{height:"100dvh"}}>
                 <div></div> 
-                <div className='appcontainer' style={{height:"100%"}}>
+                <div className='flexpaneldisplay2' style={{height:"100dvh"}}>
                     <Link className='apptxtHugeB' href={"/pages/SelfCareD/" + "naturallaws"}>
                         <h1>The Natural Laws</h1> 
                     </Link>

@@ -1132,6 +1132,11 @@ button {
   grid-template-columns: 1fr 2fr 1fr;
 }
 
+.row1fr2fr2fr{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
 .row1fr1fr1fr{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1604,6 +1609,13 @@ button {
   padding: 0;
 }
 
+.apptextB > h4 {
+  font-size: clamp(1rem, 1.5vw + 1rem, 1.5rem);
+  font-weight: 500;
+  color: rgba(5, 5, 5, 0.8);
+  padding: 0;
+}
+
 .copyright{
   font-size: clamp(1rem, 1vw + 1rem, 1.25rem);
   font-weight: 200;
@@ -1704,6 +1716,20 @@ button {
 
 .listitemapp{
   height: fit-content;
+  width: 100%;
+  border: #000000 1px solid;
+  padding: 0;
+  background-color: rgba(25, 25 ,25 , 0.5);
+  -webkit-transition: all ease 0.9s;
+  -moz-transition: all ease 0.9s;
+  -o-transition: all ease 0.9s;
+  -ms-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+
+}
+
+.listapp{
+  height: 150px;
   width: 100%;
   border: #000000 1px solid;
   padding: 0;
