@@ -50,7 +50,6 @@ const page = async ({ params }) => {
                             {relateDB.map((list) => (
                                 <div key={list.id} className='listapp' style={{marginBottom:"2rem"}}>
                                     <div className='flexpaneldisplayR' style={{width:"100%"}}>
-                                       
                                             <Image
                                                 src={list.thumbnail}
                                                 alt="MenuBKG"
