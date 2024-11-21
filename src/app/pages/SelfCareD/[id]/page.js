@@ -29,7 +29,7 @@ const page = async ({ params }) => {
                             height={300}
                         />
                         <div style={{width:"500px"}}>
-                            <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/TeachingsD/sacredid/' +vid.id}>
+                            <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/SelfCareD/natid/' +vid.id}>
                                     <h2>{vid.title}</h2>
                                     <h3>{vid.subtitle}</h3>
                             </Link>

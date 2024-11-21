@@ -48,23 +48,25 @@ const page = async ({ params }) => {
                     <div className='appcontainer'>
                         <div className='playlist' style={{height:"100%"}}>
                             {relateDB.map((list) => (
-                                <div key={list.id} className='listapp row1fr2fr' style={{marginBottom:"2rem"}}>
-                                    <Image
-                                        src={list.thumbnail}
-                                        alt="MenuBKG"
-                                        width={150}
-                                        height={150}
-                                        loading='lazy'
-                                        quality={90}
-                                    />
-                                    <Link 
-                                        className="apptextB flexpaneldisplayR" 
-                                        style={{width:"300px",textDecoration:'none', lineHeight:"1rem",height:"100%"}} 
-                                        href={'/pages/SelfCareD/natid/' +list.id}
-                                    >
-                                        <h4>{list.title}</h4>
-                                        <h4>{list.subtitle}</h4>
-                                    </Link>
+                                <div key={list.id} className='listitem' style={{marginBottom:"2rem"}}>
+                                    <div className='row1fr2fr'>
+                                        <Image
+                                            src={list.thumbnail}
+                                            alt="MenuBKG"
+                                            width={150}
+                                            height={150}
+                                            loading='lazy'
+                                            quality={90}
+                                        />
+                                        <Link 
+                                            className="apptextB flexpaneldisplayR" 
+                                            style={{width:"300px",textDecoration:'none', lineHeight:"1rem",height:"100%"}} 
+                                            href={'/pages/SelfCareD/natid/' +list.id}
+                                        >
+                                            <h4>{list.title}</h4>
+                                            <h4>{list.subtitle}</h4>
+                                        </Link>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -76,7 +78,7 @@ const page = async ({ params }) => {
     return(
         <div>
             <div className="bklink">
-                <Link href='/pages/TeachingsD'>
+                <Link href='/pages/SelfCareD'>
                     <div className="bkbtn">
                         <p>Back</p>   
                     </div>
