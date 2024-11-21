@@ -16,8 +16,8 @@ export default function page() {
                         <h1>Plants & Animals</h1>
                     </Link>
                                     
-                    <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "culture"}>
-                        <h1>Culture</h1>
+                    <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "ceremony"}>
+                        <h1>Ceremony</h1>
                     </Link>
                 </div> 
             </div>

@@ -19,11 +19,6 @@ export default function page() {
                     <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/SelfCareD/" + "socialmanners"}>
                         <h1>Social Etiquette</h1>
                     </Link>
-                                    
-                    <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/SelfCareD/" + "wellbeing"}>
-                        <h1>Personal Well Bieng</h1>
-                    </Link>
-                  
                 </div>
             </div>
         );

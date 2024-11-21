@@ -5,43 +5,40 @@ import prisma from "../../../../../server/db"
 const page = async ({ params }) => {
     const {id} = await params
     console.log(id);
-  
     const sacredDB = await prisma.post.findMany({
         where: {
             topic: id
         }
     }); 
-    
     const NaturalLaws = () => {
         return(
             <div className='tabcontent2' style={{height:"100vh"}}>
                 <div className='appcontainer'>
                    <div className='flexpaneldisplay'>
-                   
                     <div>
                     {sacredDB.map((vid) =>(
                     <div className='listpanel' key={vid.id}>
-                    <div className='row1fr2fr2fr'>
-                        <Image 
-                            src={vid.thumbnail} 
-                            alt="medicineIMGHere" 
-                            width={300} 
-                            height={300}
-                        />
-                        <div style={{width:"500px"}}>
-                            <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/SelfCareD/natid/' +vid.id}>
+                        <div className='row1fr2fr2fr'>
+                            <Image 
+                                src={vid.thumbnail} 
+                                alt="medicineIMGHere" 
+                                width={300} 
+                                height={300}
+                            />
+                            <div style={{width:"500px"}}>
+                                <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/SelfCareD/natid/' +vid.id}>
                                     <h2>{vid.title}</h2>
                                     <h3>{vid.subtitle}</h3>
-                            </Link>
+                                </Link>
+                            </div>
+                            <Image 
+                                src={vid.thumbimg} 
+                                alt="medicineIMGHere" 
+                                width={300} 
+                                height={300}
+                            />
                         </div>
-                        <Image 
-                            src={vid.thumbimg} 
-                            alt="medicineIMGHere" 
-                            width={300} 
-                            height={300}
-                        />
                     </div>
-                </div>
                    ))}    
                     </div>                
                    </div>
@@ -49,15 +46,12 @@ const page = async ({ params }) => {
             </div>   
         )
     }
-
     const Display = () => {
         if (id === "natlaws") {
             return  <NaturalLaws/>
         }else if (id !== null && id !== "socialroles") {
             return  <NaturalLaws/>
         }else if (id !== null && id !== "socialmanners") {
-            return <NaturalLaws/>
-        }else if (id !== null && id !== "wellbeing") {
             return <NaturalLaws/>
         }else if (id !== null && id !== "naturallaws") {
             return <NaturalLaws/>
@@ -67,7 +61,6 @@ const page = async ({ params }) => {
                     </div>
         }
     }
-   
     return(
         <div>
             <div className="bklink">
