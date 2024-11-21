@@ -21,29 +21,27 @@ const page = async ({ params }) => {
                     <div>
                     {sacredDB.map((vid) =>(
                     <div className='listpanel' key={vid.id}>
-                        <div className='row1fr1fr1fr'>
-                            <Image 
-                                src={vid.thumbnail} 
-                                alt="medicineIMGHere" 
-                                width={300} 
-                                height={300}
-                            />
-                            <div style={{width:"500px", height:"100%"}}>
-                                <Link href={'/pages/SelfCareD/natid/' +vid.id}>
-                                    <div className='apptext' style={{width:"100%", height:"100%"}}>
-                                        <h3>{vid.title}</h3>
-                                        <p>{vid.subtitle}</p>
-                                    </div>
-                                </Link>
-                            </div>
-                            <Image 
-                                src={vid.thumbimg} 
-                                alt="medicineIMGHere" 
-                                width={300} 
-                                height={300}
-                            />
+                    <div className='row1fr2fr2fr'>
+                        <Image 
+                            src={vid.thumbnail} 
+                            alt="medicineIMGHere" 
+                            width={300} 
+                            height={300}
+                        />
+                        <div style={{width:"500px"}}>
+                            <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/TeachingsD/sacredid/' +vid.id}>
+                                    <h2>{vid.title}</h2>
+                                    <h3>{vid.subtitle}</h3>
+                            </Link>
                         </div>
+                        <Image 
+                            src={vid.thumbimg} 
+                            alt="medicineIMGHere" 
+                            width={300} 
+                            height={300}
+                        />
                     </div>
+                </div>
                    ))}    
                     </div>                
                    </div>

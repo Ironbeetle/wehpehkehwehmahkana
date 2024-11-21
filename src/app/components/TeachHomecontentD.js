@@ -11,7 +11,6 @@ export default function TeachHomecontentD(){
     const [activeTab, setActiveTab] = useState(1);
     const searchParams = useSearchParams();
     const lesson = searchParams.get('keyword');
-   
     const PrayerView = () => {
         return (
             <>
@@ -36,8 +35,7 @@ export default function TeachHomecontentD(){
             </>
         );
     }
-   
-    const IntroView = () => {
+    const Viewdefault = () => {
         return (
             <>
                 <motion.div
@@ -46,20 +44,41 @@ export default function TeachHomecontentD(){
                     transition={{duration: 1, ease: 'easeInOut'}}
                     className='row1fr2fr44r4'
                 >
-                   
                     <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                         <div className='topLayeritemTextD'>
+
                             <div className='apptxtTitlesW'>
                                 <h2>
                                     Medicine Bundle
                                 </h2>                               
                                 <h2>
                                     Re-Connecting To The Land<br/>
-                                    and Ancestral Knowledge<br/> of the<br/>
+                                    and<br/> Ancestral Knowledge<br/> of the<br/>
                                     Ininew and Dene 
                                 </h2>
-                            </div> 
+                            </div>
                         </div>
+                    </div>
+                </motion.div>
+            </>
+        );
+    }
+    const IntroView = () => {
+        return (
+            <>
+                <motion.div 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                    className="flexpaneldisplay" 
+                    style={{height:"100%"}}
+                >
+                    <div className='topLayeritemVid flexpaneldisplay3'>
+                        <iframe src="https://player.vimeo.com/video/811032864?h=bb18723052"
+                            width="720" 
+                            height="405"
+                            style={{border:'none'}} 
+                        />
                     </div>
                 </motion.div>
             </>
@@ -159,7 +178,6 @@ export default function TeachHomecontentD(){
             </motion.div>
         )
     }
-   
     return(
         <motion.div
             initial={{opacity: 0}}
@@ -182,7 +200,7 @@ export default function TeachHomecontentD(){
                 <div className='splitpanelTeachLeft2'>
                 <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                         <div className='topLayeritemRight'> 
-                            <button className={activeTab === 1 ? 'active' : ''} onClick={() => setActiveTab(1)}
+                            <button className={activeTab === 4 ? 'active' : ''} onClick={() => setActiveTab(4)}
                                 style={{width: '100%', height: '100%'}}
                             >
                                 <Image
@@ -192,7 +210,6 @@ export default function TeachHomecontentD(){
                                         height={125}
                                         loading='lazy'
                                         quality={90}
-                                        
                                     />
                                 <div className="apptextB">
                                     <h3>Introduction</h3>
@@ -200,7 +217,7 @@ export default function TeachHomecontentD(){
                             </button>
                         </div>
                         <div className='topLayeritemRight'> 
-                            <button className={activeTab === 2 ? 'active' : ''} onClick={() => setActiveTab(2)}
+                            <button className={activeTab === 3 ? 'active' : ''} onClick={() => setActiveTab(3)}
                                 style={{width: '100%', height: '100%'}}
                             >
                                 <Image
@@ -210,7 +227,6 @@ export default function TeachHomecontentD(){
                                         height={125}
                                         loading='lazy'
                                         quality={90}
-                                      
                                     />
                                 <div className="apptextB">
                                     <h3>Prayer</h3>
@@ -218,7 +234,7 @@ export default function TeachHomecontentD(){
                             </button>
                         </div>
                         <div className='topLayeritemRight'> 
-                            <button className={activeTab === 3 ? 'active' : ''} onClick={() => setActiveTab(3)}
+                            <button className={activeTab === 2 ? 'active' : ''} onClick={() => setActiveTab(2)}
                                 style={{width: '100%', height: '100%'}}
                             >
                                 <Image
@@ -228,20 +244,19 @@ export default function TeachHomecontentD(){
                                         height={125}
                                         loading='lazy'
                                         quality={90}
-                                       
                                     />
                                 <div className="apptextB">
                                     <h3>Teachings</h3>
                                 </div>
                             </button>
                         </div>
-                       
                     </div>
                 </div>
                 <div className='splitpanelTeachRight2'>
-                    {activeTab === 1 && <IntroView/>}
-                    {activeTab === 2 && <PrayerView/>} 
-                    {activeTab === 3 && <Category/>}  
+                    {activeTab === 1 && <Viewdefault/>}
+                    {activeTab === 4 && <IntroView/>}
+                    {activeTab === 3 && <PrayerView/>} 
+                    {activeTab === 2 && <Category/>}  
                </div>
             </motion.div>
         </motion.div>

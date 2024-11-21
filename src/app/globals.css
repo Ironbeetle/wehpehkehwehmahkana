@@ -1619,7 +1619,7 @@ button {
 .copyright{
   font-size: clamp(1rem, 1vw + 1rem, 1.25rem);
   font-weight: 200;
-  color: #ffffff;
+  color: #101010;
   padding: 0;
 
 }
@@ -1729,8 +1729,8 @@ button {
 }
 
 .listapp{
-  height: 150px;
-  width: 100%;
+  height: fit-content;
+  width: 95%;
   border: #000000 1px solid;
   padding: 0;
   background-color: rgba(25, 25 ,25 , 0.5);

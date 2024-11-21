@@ -8,15 +8,15 @@ export default function page() {
             <div className='row1fr1fr' style={{height:"100dvh"}}>
                 <div></div>
                 <div className='flexpaneldisplay' style={{height:"100%"}}>         
-                    <Link className='apptxtHugeB' href={"/pages/TeachingsD/" + "sacredteachings"}>
+                    <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "sacredteachings"}>
                         <h1>Sacred Teachings</h1>
                     </Link>
 
-                    <Link className='apptxtHugeB' href={"/pages/TeachingsD/" + "sacrednature"}>
+                    <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "sacrednature"}>
                         <h1>Plants & Animals</h1>
                     </Link>
                                     
-                    <Link className='apptxtHugeB' href={"/pages/TeachingsD/" + "culture"}>
+                    <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "culture"}>
                         <h1>Culture</h1>
                     </Link>
                 </div> 

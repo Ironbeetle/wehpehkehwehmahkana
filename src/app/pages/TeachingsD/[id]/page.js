@@ -4,19 +4,14 @@ import Link from 'next/link';
 import CreationLesson from "../../../stories/Storycontent";
 import prisma from "../../../../../server/db";
 
-
 const page = async ({ params }) => {
     const {id} = await params
     console.log(id);
-  
-   
-        const sacredDB = await prisma.post.findMany({
-            where: {
-                topic: id
-            }
-        });
-   
-   
+    const sacredDB = await prisma.post.findMany({
+        where: {
+            topic: id
+        }
+    });
     const SacredTeaching = () => {
         return(
             <div className='tabcontent2' style={{height:"100vh"}}>
@@ -27,7 +22,7 @@ const page = async ({ params }) => {
                     <div>
                     {sacredDB.map((vid) =>(
                     <div className='listpanel' key={vid.id}>
-                        <div className='row1fr1fr1fr'>
+                        <div className='row1fr2fr2fr'>
                             <Image 
                                 src={vid.thumbnail} 
                                 alt="medicineIMGHere" 
@@ -35,11 +30,9 @@ const page = async ({ params }) => {
                                 height={300}
                             />
                             <div style={{width:"500px"}}>
-                                <Link href={'/pages/TeachingsD/sacredid/' +vid.id}>
-                                    <div className='apptext'>
-                                        <h3>{vid.title}</h3>
-                                        <p>{vid.subtitle}</p>
-                                    </div>
+                                <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/TeachingsD/sacredid/' +vid.id}>
+                                        <h2>{vid.title}</h2>
+                                        <h3>{vid.subtitle}</h3>
                                 </Link>
                             </div>
                             <Image 
