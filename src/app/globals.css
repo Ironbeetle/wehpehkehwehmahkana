@@ -1438,8 +1438,18 @@ button {
   text-align: center;
   text-shadow: #161616 1px 1px 8px;
   text-decoration: none;
+  -webkit-transition: all ease 0.9s;
+  -moz-transition: all ease 0.9s;
+  -o-transition: all ease 0.9s;
+  -ms-transition: all ease 0.9s;
+  transition: all ease 0.9s;
 }
 
+.apptxtHugeB:hover > h1{
+  font-size:clamp(4rem, 4vw + 1rem, 5rem);
+  font-weight: 500;
+  color: rgba(255, 203, 47, 0.6);   
+}
 .apptxtFront > h1{
   font-size:clamp(2rem, 4vw + 1rem, 3.5rem);
   font-weight: 500;
