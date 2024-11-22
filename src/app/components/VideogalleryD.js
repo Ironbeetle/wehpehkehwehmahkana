@@ -17,14 +17,10 @@ const VideogalleryD = () => {
             <HamburgerMenu/>
             </div>
             <div className="bkgcontainer">
-                <Image
-                    src={TeachHomeDBKG}
-                    alt="ArtGallerycontentD"
-                    fill
-                    loading="eager"
-                    quality={90}
-                />
-            </div>
+                <video autoPlay className='videobkg'>
+                        <source src="/webm/GalleryversionD.webm" type="video/webm; codecs=vp9"/>
+                    </video>
+                </div>
             <motion.div 
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
@@ -32,13 +28,13 @@ const VideogalleryD = () => {
                 className='vidgallerycontainer'
             >
                 <div className='row2fr1fr'>
-                   <div className='tabcontent'>
+                   <div>
                         <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                             <iframe 
                                 id="iframeId"
                                 src="https://player.vimeo.com/video/306814037?h=910c1e5f5f&portrait=0" 
-                                width="640" 
-                                height="360"
+                                width="720" 
+                                height="480"
                                 style={{border:'none'}} 
                             />
                             <div className='flexpaneldisplayR copyright'>
