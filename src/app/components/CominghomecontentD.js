@@ -15,7 +15,6 @@ import Teacher from '../../../public/Teacher.svg';
 import PassKnwldgeBKG from '../../../public/PassKnwldgeBKG.svg';
 import Landgathering from '../../../public/Landgathering.svg';
 import HamburgerMenu from '../components/HamburgerMenu';
-const BKGAudio = dynamic(() => import('./BKGAudio'), { ssr: false });
 const variantstxt = {
     hidden: {
         opacity: 0,
@@ -40,9 +39,7 @@ function CominghomecontentD(){
     return(
         <div>
         {/* header start */}
-        <div className="audiocontain">
-            <BKGAudio/>
-        </div>
+       
         <div className="hamlink">
             <HamburgerMenu/>
         </div>

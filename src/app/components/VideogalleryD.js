@@ -1,11 +1,9 @@
 'use client';
-import React, {useState} from 'react';
+import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import {motion} from 'framer-motion';
 import HamburgerMenu from '../components/HamburgerMenu';
 import { MdCopyright } from "react-icons/md";
-import TeachHomeDBKG from "../../../public/TradTeachingsBKG.jpg";
 const VideogalleryD = () => {
     const handleButtonClick = (videoUrl) => {
         const iframe = document.getElementById('iframeId');
@@ -18,8 +16,8 @@ const VideogalleryD = () => {
             </div>
             <div className="bkgcontainer">
                 <video autoPlay className='videobkg'>
-                        <source src="/webm/GalleryversionD.webm" type="video/webm; codecs=vp9"/>
-                    </video>
+                    <source src="/webm/GalleryversionD.webm" type="video/webm; codecs=vp9"/>
+                </video>
                 </div>
             <motion.div 
                 initial={{opacity: 0}}
