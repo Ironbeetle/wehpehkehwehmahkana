@@ -36,7 +36,7 @@ const VideogalleryD = () => {
                         <div className='flexpaneldisplay' style={{height:"100dvh"}}>
                             <iframe 
                                 id="iframeId"
-                                src="" 
+                                src="https://player.vimeo.com/video/306814037?h=910c1e5f5f&portrait=0" 
                                 width="640" 
                                 height="360"
                                 style={{border:'none'}} 
@@ -113,7 +113,7 @@ const VideogalleryD = () => {
                                 <div className='row1fr2fr'>
                                     <div>
                                         <Image 
-                                            src="/thumbnails/sharonmckay.jpg" 
+                                            src="/thumbnails/MaryLA.jpg" 
                                             alt="medicineIMGHere" 
                                             width={150} 
                                             height={150}
