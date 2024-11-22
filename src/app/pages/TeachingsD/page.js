@@ -12,7 +12,7 @@ export default function page() {
                     </Link>
 
                     <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "sacrednature"}>
-                        <h1>Plants & Animals</h1>
+                        <h1>Natural World</h1>
                     </Link>
                                     
                     <Link className='apptxtHugeB' style={{textDecoration:'none'}} href={"/pages/TeachingsD/" + "ceremony"}>
