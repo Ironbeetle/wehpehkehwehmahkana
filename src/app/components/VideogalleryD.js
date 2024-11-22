@@ -38,7 +38,7 @@ const VideogalleryD = () => {
                                 style={{border:'none'}} 
                             />
                             <div className='flexpaneldisplayR copyright'>
-                                <p>Copyright&nbsp;</p> <MdCopyright/><p>&nbsp;2023&nbsp;</p><p>All Rights Reserved</p>
+                                <h3>Copyright&nbsp;</h3> <MdCopyright/><h3>&nbsp;2023&nbsp;</h3><h3>All Rights Reserved</h3>
                             </div>
                         </div>
                    </div>
@@ -62,7 +62,7 @@ const VideogalleryD = () => {
                                         style={{width:'100%', height:'100%'}} id='video1'>
                                         <div className='apptext'>
                                             <h3>We Peh Keh Weh Mah Kana</h3>
-                                            <p><span>PART 1&nbsp;&nbsp;</span>English, 59 minutes</p>
+                                            <h3><span>PART 1&nbsp;&nbsp;</span>English, 59 minutes</h3>
                                         </div>
                                     </button>
                                 </div>
@@ -79,7 +79,7 @@ const VideogalleryD = () => {
                                         style={{width:'100%', height:'100%'}} id='video1'>
                                         <div className='apptext'>
                                             <h3>We Peh Keh Weh Mah Kana</h3>
-                                            <p><span>PART 2&nbsp;&nbsp;</span>English, 40 minutes</p>
+                                            <h3><span>PART 2&nbsp;&nbsp;</span>English, 40 minutes</h3>
                                         </div>
                                     </button>
                                 </div>
@@ -99,7 +99,7 @@ const VideogalleryD = () => {
                                                 style={{width:'100%', height:'100%'}} id='video2'>
                                             <div className='apptext'>
                                                 <h3>We Peh Keh Weh Mah Kana</h3>
-                                                <p><span>Ininew&nbsp;&nbsp;</span>Part 1, 100 minutes</p>
+                                                <h3><span>Ininew&nbsp;&nbsp;</span>Part 1, 100 minutes</h3>
                                             </div>
                                         </button>
                                     </div>
@@ -120,7 +120,7 @@ const VideogalleryD = () => {
                                                 style={{width:'100%', height:'100%'}} id='video2'>
                                             <div className='apptext'>
                                                 <h3>We Peh Keh Weh Mah Kana</h3>
-                                                <p><span>Ininew&nbsp;&nbsp;</span>Part 2, 65 minutes</p>
+                                                <h3><span>Ininew&nbsp;&nbsp;</span>Part 2, 65 minutes</h3>
                                             </div>
                                         </button>
                                     </div>
@@ -141,7 +141,7 @@ const VideogalleryD = () => {
                                                 style={{width:'100%', height:'100%'}} id='video2'>
                                             <div className='apptext'>
                                                 <h3>We Peh Keh Weh Mah Kana</h3>
-                                                <p><span>Dene&nbsp;&nbsp;</span>Part 1, 72 minutes</p>
+                                                <h3><span>Dene&nbsp;&nbsp;</span>Part 1, 72 minutes</h3>
                                             </div>
                                         </button>
                                     </div>
@@ -162,7 +162,7 @@ const VideogalleryD = () => {
                                                 style={{width:'100%', height:'100%'}} id='video2'>
                                             <div className='apptext'>
                                                 <h3>We Peh Keh Weh Mah Kana</h3>
-                                                <p><span>Dene&nbsp;&nbsp;</span>Part 2, 50 minutes</p>
+                                                <h3><span>Dene&nbsp;&nbsp;</span>Part 2, 50 minutes</h3>
                                             </div>
                                         </button>
                                     </div>
@@ -191,7 +191,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Jasyn Lucas</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -214,7 +214,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Buffalo</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -237,7 +237,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Tree of Life</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -260,7 +260,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Wind</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -283,7 +283,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Tobacco</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -306,7 +306,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Sasquatch</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -329,7 +329,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Cedar</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -352,7 +352,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Loon</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -375,7 +375,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Fire</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -398,7 +398,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Butterfly</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -421,7 +421,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Creation</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -444,7 +444,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>All Nations</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -467,7 +467,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Eagle</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -490,7 +490,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Beaver</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
@@ -513,7 +513,7 @@ const VideogalleryD = () => {
                                             style={{width:'100%', height:'100%'}} id='video8'>
                                             <div className='apptext'>
                                                 <h3>Polar Bear</h3>
-                                                <p>English</p>
+                                                <h3>English</h3>
                                             </div>
                                     </button>
                                     </div>
