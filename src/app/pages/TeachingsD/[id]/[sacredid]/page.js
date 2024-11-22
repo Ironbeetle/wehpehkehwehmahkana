@@ -60,7 +60,7 @@ const page = async ({ params }) => {
                                     <Link 
                                         className="apptextB flexpaneldisplayR" 
                                         style={{width:"250px",textDecoration:'none', lineHeight:"1rem",height:"100%"}} 
-                                        href={'/pages/SelfCareD/sacredid/' +list.id}
+                                        href={'/pages/TeachingsD/sacredid/' +list.id}
                                     >
                                         <h4>{list.title}</h4>
                                         <h4>{list.subtitle}</h4>
