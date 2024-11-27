@@ -12,7 +12,7 @@ const page = async ({ params }) => {
             topic: smid
         }
     });
-    const SacredTeaching = () => {
+    const NaturalLaws = () => {
         return(
             <div className='tabcontent2' style={{height:"100vh"}}>
                 <div className='appcontainer'>
@@ -62,7 +62,9 @@ const page = async ({ params }) => {
                     <source src="/webm/Caribou.webm" type="video/webm; codecs=vp9"/>
                 </video>
             </div>
-            <SacredTeaching/>
+            <div style={{marginTop:"10%"}}>
+                <NaturalLaws/>
+            </div>
         </div>
     );
 }

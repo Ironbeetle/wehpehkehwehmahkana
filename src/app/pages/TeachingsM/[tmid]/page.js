@@ -64,7 +64,9 @@ const page = async ({ params }) => {
                     <source src="/webm/Caribou.webm" type="video/webm; codecs=vp9"/>
                 </video>
             </div>
-            <SacredTeaching/>
+            <div style={{marginTop:"10%"}}>
+                <SacredTeaching/>
+            </div>
         </div>
     );
 }
