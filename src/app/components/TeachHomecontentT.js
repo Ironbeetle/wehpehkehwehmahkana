@@ -25,29 +25,18 @@ export default function TeachHomecontentT(){
     const PrayerView = () => {
         return (
             <>
-                <motion.div 
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 1, ease: 'easeInOut'}}
-                    className='flexpaneldisplay' 
-                    style={{height:"100%"}}
-                >
+                <div className='flexpaneldisplay' style={{height:"100%"}}>
                     <div className='topLayeritemTextD'>
                         <div className='apptxtTitlesW'>
                             <h2>
-                                Thank You Creator<br/>
-                                for blessing me with another day to continue,<br/>
-                                Walking, Learning and Living The Good Life,<br/>
-                            </h2>
-                            <h2>
-                                Thank you for giving me insight on how <br/>I treat myself, and to see good in others
-                            </h2>
-                            <h2>
-                                In your blessed name Amen
+                            Creator<br/> Thank you for the WISDOM<br/> to see the TRUTH<br/> and the COURAGE to change,<br/>
+                            so that I can have LOVE<br/> and HUMILITY in my heart,<br/> 
+                            from this I live life with HONESTY<br/>
+                            and RESPECT.
                             </h2>
                         </div> 
                     </div>
-                </motion.div>
+                </div>
             </>
         );
     }
@@ -82,13 +71,7 @@ export default function TeachHomecontentT(){
     const DocView = () => {
         return (
             <>
-                <motion.div 
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 1, ease: 'easeInOut'}}
-                    className="flexpaneldisplay" 
-                    style={{height:"100%"}}
-                >
+                <div className="flexpaneldisplay" style={{height:"100%"}}>
                     <div className='topLayeritemVid flexpaneldisplay3'>
                         <iframe src="https://player.vimeo.com/video/811032864?h=bb18723052"
                             width="720" 
@@ -96,18 +79,13 @@ export default function TeachHomecontentT(){
                             style={{border:'none'}} 
                         />
                     </div>
-                </motion.div>
+                </div>
             </>
         );
     }
     const Ininew = () => {
         return (
-            <motion.div
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{duration: 1, ease: 'easeInOut'}}
-                style={{height:"100%"}}
-            >
+            <div style={{height:"100%"}}>
                 <div className='circleteachtablet'>
                     <div className="quarterul">
                         <div className='qulpos'>
@@ -190,7 +168,7 @@ export default function TeachHomecontentT(){
                         </div>    
                     </div>   
                 </div>
-            </motion.div>
+            </div>
         )
     }
     let IninewConvert = () => {
@@ -201,7 +179,7 @@ export default function TeachHomecontentT(){
                         style={{width: '100%', height: '100%'}}
                     >
                         <div className="apptextB">
-                            <h3>Fundamentals</h3>
+                            <h3>Teachings</h3>
                         </div>
                     </button>
                 </>
@@ -214,7 +192,7 @@ export default function TeachHomecontentT(){
                         style={{width: '100%', height: '100%'}}
                     >
                         <div className="apptextB">
-                            <h3>Fundamentals</h3>
+                            <h3>Teachings</h3>
                         </div>
                     </button>
                 </>
@@ -241,11 +219,7 @@ export default function TeachHomecontentT(){
     }
     let PageView = () => {
         return(
-            <motion.div
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-                transition={{duration: 1, ease: 'easeInOut'}}
-            >
+            <div>
                 <div className="hamlink">
                     <HamburgerMenu/>
                 </div>
@@ -257,14 +231,14 @@ export default function TeachHomecontentT(){
                 <motion.div 
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
-                    transition={{duration: 1.5, delay: 1, ease: 'easeInOut'}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
                 >
                     <div className='teachpaneltop'>
                         <ReturnView/>
                         {activeTab === 2 && <DocView/>} 
                     </div>
                     <div className='teachpanelbot'>
-                        <div className='row1fr1fr flexpaneldisplay' style={{height:"100%"}}>
+                        <div className='row1fr1fr1fr flexpaneldisplay' style={{height:"100%"}}>
                             <div className='flexpaneldisplay' style={{height:"100%"}}>
                                 <div className='topLayeritemRight'> 
                                     <PrayConvert/>
@@ -286,22 +260,10 @@ export default function TeachHomecontentT(){
                                     <IninewConvert/>
                                 </div>
                             </div>
-                            <div className='flexpaneldisplay' style={{height:"100%"}}>
-                                <div className='topLayeritemRight'>
-                                    <Link 
-                                        href='/pages/MedicineJourneyT'
-                                        className="apptextB" 
-                                        style={{textDecoration:'none',width:"100%", height:"100%"}}
-                                    >
-                                        <h3>Medicine Journey</h3>
-                                    </Link>
-                                </div>
-                            </div>
                         </div>
-                       
                    </div>
                 </motion.div>
-            </motion.div>
+            </div>
         );
     }
     let PageFlipView = () => {

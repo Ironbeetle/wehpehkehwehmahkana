@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import HamburgerMenu from '../components/HamburgerMenu';
-const BKGAudio = dynamic(() => import('./BKGAudio'), { ssr: false });
 export default function TeachHomecontentD(){
     const [activeTab, setActiveTab] = useState(1);
     const searchParams = useSearchParams();

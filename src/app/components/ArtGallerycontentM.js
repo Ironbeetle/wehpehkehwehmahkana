@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import Image from "next/image";
-import BKGAudio from "../components/BKGAudio";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Teachcarousel from "../components/Teachcarousel"; 
 import CarouselItems from "../components/Artcarousel"; 
@@ -12,9 +11,7 @@ const ArtGalleryM = () => {
             <div className="hamlink">
                 <HamburgerMenu/>
             </div>
-            <div className="audiocontain">
-                <BKGAudio/>
-            </div>
+           
             <div className="bkgcontainer">
                 <Image
                     src={GeneralBKGM}

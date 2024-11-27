@@ -325,6 +325,15 @@ button {
   padding: 0;
 }
 
+.bklinkm {
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
 .bkbtn{
   background-color:rgba(250, 250 ,250 , 0.6);
   border-radius: 1vw;
@@ -437,7 +446,7 @@ button {
 .circleteachM{
   position: absolute;
   width: 95%;
-  height: 78%;
+  height: 56%;
   top: 50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -650,6 +659,16 @@ button {
   padding: 0;
 }
 
+.splitpaneltopH{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  margin: 0;
+  padding: 0;
+}
+
 .splitpaneltopB{
   position: absolute;
   top: 0;
@@ -663,6 +682,16 @@ button {
 .splitpanelbot{
   position: absolute;
   top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.splitpanelbotH{
+  position: absolute;
+  top: 60%;
   left: 0;
   width: 100%;
   height: 50%;
@@ -1530,6 +1559,14 @@ button {
   text-shadow: #000000 1px 1px 8px;
 }
 
+.apptxtTitlesW > h4{
+  font-size:clamp(1rem, 1vw + 1rem, 2rem);
+  font-weight: 500;
+  color: rgba(250, 250 ,250 , 1);
+  text-align: center;
+  text-shadow: #000000 1px 1px 8px;
+}
+
 .apptxtTitlesW > h1{
   font-size:clamp(3rem, 3vw + 1rem, 4.5rem);
   font-weight: 500;
@@ -1712,6 +1749,20 @@ button {
 
 .listitemM{
   height: 100%;
+  width: 47vw;
+  border: #000000 1px solid;
+  padding: 0;
+  margin-bottom: 5%;
+  background-color: rgba(25, 25 ,25 , 0.3);
+  -webkit-transition: all ease 0.9s;
+  -moz-transition: all ease 0.9s;
+  -o-transition: all ease 0.9s;
+  -ms-transition: all ease 0.9s;
+  transition: all ease 0.9s;
+}
+
+.listitemMM{
+  height: fit-content;
   width: 47vw;
   border: #000000 1px solid;
   padding: 0;
@@ -3696,6 +3747,7 @@ button {
 }
 
 .teachpanelMM{
+  position: relative;
   width: 95vw;
   margin-left: auto;
   margin-right: auto;

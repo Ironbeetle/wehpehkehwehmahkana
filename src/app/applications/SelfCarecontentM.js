@@ -1,5 +1,5 @@
 'use client';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {useSearchParams} from 'next/navigation';
@@ -9,6 +9,17 @@ const SelfCarecontentM = () => {
     const searchParams = useSearchParams();
     let lesson = searchParams.get('keyword');
     let [activeTab, setActiveTab] = useState(1);
+    const [width, setWidth] = useState(0);
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
     let ReturnView = () => {
         if (lesson === 'activeview') {
             return (
@@ -54,7 +65,7 @@ const SelfCarecontentM = () => {
                         <button className={activeTab === 2 ? 'active' : ''} onClick={() => setActiveTab(2)}
                             style={{width: '100%', height: '100%'}}
                         >
-                            <h1 className='apptextwB'>Begin</h1>
+                            <h1 className='apptextB'>Begin</h1>
                         </button>
                     </div>
                 </div> 
@@ -65,7 +76,7 @@ const SelfCarecontentM = () => {
     let ContentListView = () => {
         return(
             <>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -91,7 +102,7 @@ const SelfCarecontentM = () => {
                         <div className='panelgrab grabpanelgreen'/>
                     </div>
                 </div>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -117,7 +128,7 @@ const SelfCarecontentM = () => {
                         <div className='panelgrab grabpanelgreen'/>
                     </div>
                 </div>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -143,7 +154,7 @@ const SelfCarecontentM = () => {
                         <div className='panelgrab grabpanelgreen'/>
                     </div>
                 </div>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -169,7 +180,7 @@ const SelfCarecontentM = () => {
                         <div className='panelgrab grabpanelgreen'/>
                     </div>
                 </div>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -195,7 +206,7 @@ const SelfCarecontentM = () => {
                         <div className='panelgrab grabpanelgreen'/>
                     </div>
                 </div>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -221,7 +232,7 @@ const SelfCarecontentM = () => {
                         <div className='panelgrab grabpanelgreen'/>
                     </div>
                 </div>
-                <div className='sacreditemMob itemBGgreen'>
+                <div className='sacreditemTab itemBGgreen'>
                     <Link 
                         href={{
                             pathname: '/pages/LessonDT',
@@ -256,10 +267,10 @@ const SelfCarecontentM = () => {
                 initial={{opacity:0}}
                 animate={{opacity:1}}
                 transition={{duration:1, ease:"easeInOut"}}
-                className='tabcontent2'
+                className='tabcontent mgntop30'
                 style={{height:"100dvh"}}
             >
-                <div className='mgntop30' style={{height:"fit-content"}}>
+                <div style={{height:"fit-content"}}>
                     <Teachcarousel>
                         <ContentListView/>
                     </Teachcarousel>
@@ -267,31 +278,56 @@ const SelfCarecontentM = () => {
             </motion.div>
         );
     }
-    return(
-        <>
-            <div className="bklink">
-                <Link 
-                    href={{
-                        pathname: '/pages/TeachHomeM',
-                        query: {
-                            keyword: 'activeview'
-                        }
-                    }}
-                >
-                    <div className="bkbtn">
-                        <p>Back</p>   
-                    </div>
-                </Link>
-            </div>
-            <div className="bkgcontainer">
-                <video autoPlay loop className='videobkg'>
-                    <source src="/webm/TurtleBKGMobile.webm" type="video/webm; codecs=vp9"/>
-                </video>
-            </div>
-            <div className="appcontainer">
+    let PageView = () => {
+        return(
+            <motion.div
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{duration:1, ease:"easeInOut"}}
+            >
+                <div className="bklink">
+                    <Link 
+                        href={{
+                            pathname: '/pages/TeachHomeT',
+                            query: {
+                                keyword: 'activeview'
+                            }
+                        }}
+                    >
+                        <div className="bkbtn">
+                            <p>Back</p>   
+                        </div>
+                    </Link>
+                </div>
+                <div className="bkgcontainer">
+                    <video autoPlay loop className='videobkg'>
+                        <source src="/webm/TurtleBKGTablet.webm" type="video/webm; codecs=vp9"/>
+                    </video>
+                </div>
                 <ReturnView/>
-            </div>
-        </>
-    );
+            </motion.div>
+        );
+    }
+    let PageFlipView = () => {
+        return(
+            <>
+                <div className="logobox">
+                    <div className='flexpaneldisplay'>
+                        <div className="apptextL">
+                            <h1>Please Turn To Portrait</h1>
+                        </div>
+                    </div>
+                </div>
+            </>
+        );
+    }
+    let FullPageView = () => {
+        if (width > 900) {
+            return <PageFlipView/>
+        }else {
+            return <PageView/>
+        }
+    }
+    return <FullPageView/>
 }
 export default SelfCarecontentM;

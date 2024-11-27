@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import BKGAudio from '../components/BKGAudio';
 import HamburgerMenu from '../components/HamburgerMenu';
 import Teachcarousel from '../components/Teachcarousel';
 import ComehomeBKG from '../../../public/ComehomeBKG.jpg';
@@ -168,9 +167,7 @@ const VideogalleryM = () => {
     }
     return (    
         <>
-            <div className="audiocontain">
-                <BKGAudio/>
-            </div>
+           
             <div className="hamlink">
                 <HamburgerMenu/>
             </div>
@@ -189,7 +186,7 @@ const VideogalleryM = () => {
                     <div className='teachpanelMM' style={{height:'100%'}}>
                         <iframe 
                             id="iframeId"
-                            src="" 
+                            src="https://player.vimeo.com/video/306814037?h=910c1e5f5f&portrait=0" 
                             width="100%" 
                             height="100%"
                             style={{border:'none'}} 

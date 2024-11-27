@@ -1,14 +1,15 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import HamburgerMenu from '../components/HamburgerMenu';
-export default function TeachHomecontentM(){
+export default function TeachHomecontentT(){
     const [activeTab, setActiveTab] = useState(1);
     const searchParams = useSearchParams();
     const lesson = searchParams.get('keyword');
-    const lesson2 = searchParams.get('keyword2');
     const [width, setWidth] = useState(0);
     useEffect(() => {
         setWidth(window.innerWidth);
@@ -20,62 +21,19 @@ export default function TeachHomecontentM(){
             window.removeEventListener("resize", handleResize);
         };
     }, []);
-    let BackLink = () => {
-        if (lesson === 'workshop' || lesson2 === 'workshopr') {
-            return  <div className="bklink">
-                        <Link href='/KTC_WorkShops'>
-                            <div className="bkbtn">
-                                <p>Back</p>
-                            </div>
-                        </Link>
-                    </div>
-        }else {
-            return  <div className="hamlink">
-                        <HamburgerMenu/>
-                    </div> 
-        }
-    }
-    let KeywordSelect = () => {
-        if (lesson === 'workshop') 
-            {return 'wsreturn';}
-        else 
-            {return 'webview';}
-    }
-    let ReturnView = () => {
-        if (lesson === 'activeview') {
-            return (
-                <>
-                {activeTab === 3 && <PrayerView/>}
-                {activeTab === 1 && <Ininew/>}
-                </>
-            )
-        }
-        else {
-            return (
-                <>
-                {activeTab === 1 && <PrayerView/>}
-                {activeTab === 3 && <Ininew/>}
-                </>
-            )
-        }
-    }
+    
     const PrayerView = () => {
         return (
             <>
-                <div className='flexpaneldisplay' style={{height:"90%"}}>
+                <div className='flexpaneldisplay' style={{height:"100%"}}>
                     <div className='topLayeritemText'>
                         <div className='apptxtTitlesW'>
-                            <h3>
-                                Thank You Creator<br/>
-                                for blessing me with another day to continue,<br/>
-                                Walking, Learning and Living The Good Life,<br/>
-                            </h3>
-                            <h3>
-                                Thank you for giving me insight on how <br/>I treat myself, and to see good in others
-                            </h3>
-                            <h3>
-                                In your blessed name Amen
-                            </h3>
+                            <h2>
+                            Creator<br/> Thank you for the WISDOM<br/> to see the TRUTH<br/> and the COURAGE to change,<br/>
+                            so that I can have LOVE<br/> and HUMILITY in my heart,<br/> 
+                            from this I live life with HONESTY<br/>
+                            and RESPECT.
+                            </h2>
                         </div> 
                     </div>
                 </div>
@@ -221,7 +179,7 @@ export default function TeachHomecontentM(){
                         style={{width: '100%', height: '100%'}}
                     >
                         <div className="apptextB">
-                            <h3>Fundamentals</h3>
+                            <h3>Teachings</h3>
                         </div>
                     </button>
                 </>
@@ -234,84 +192,99 @@ export default function TeachHomecontentM(){
                         style={{width: '100%', height: '100%'}}
                     >
                         <div className="apptextB">
-                            <h3>Fundamentals</h3>
+                            <h3>Teachings</h3>
                         </div>
                     </button>
                 </>
             )
         }
     }
-    const SummaryView = () => {
-        return (
+    let ReturnView = () => {
+        if (lesson === 'activeview') {
+            return (
+                <>
+                {activeTab === 3 && <PrayerView/>}
+                {activeTab === 1 && <Ininew/>}
+                </>
+            )
+        }
+        else {
+            return (
+                <>
+                {activeTab === 1 && <PrayerView/>}
+                {activeTab === 3 && <Ininew/>}
+                </>
+            )
+        }
+    }
+    let PageView = () => {
+        return(
+            <div>
+                <div className="hamlink">
+                    <HamburgerMenu/>
+                </div>
+                <div className="bkgcontainer">
+                    <video autoPlay loop className='videobkg'>
+                        <source src="/webm/TeachBKGTablet.webm" type="video/webm; codecs=vp9"/>
+                    </video>
+                </div>
+                <motion.div 
+                    initial={{opacity: 0}}
+                    animate={{opacity: 1}}
+                    transition={{duration: 1, ease: 'easeInOut'}}
+                >
+                    <div className='teachpaneltop'>
+                        <ReturnView/>
+                        {activeTab === 2 && <DocView/>} 
+                    </div>
+                    <div className='teachpanelbot'>
+                        <div className='row1fr1fr1fr flexpaneldisplay' style={{height:"100%"}}>
+                            <div className='flexpaneldisplay' style={{height:"100%"}}>
+                                <div className='topLayeritemRight'> 
+                                    <PrayConvert/>
+                                </div>
+                            </div>
+                            <div className='flexpaneldisplay' style={{height:"100%"}}>
+                                <div className='topLayeritemRight'> 
+                                    <button className={activeTab === 2 ? 'active' : ''} onClick={() => setActiveTab(2)}
+                                        style={{width: '100%', height: '100%'}}
+                                    >
+                                        <div className="apptextB">
+                                            <h3>Introduction</h3>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className='flexpaneldisplay' style={{height:"100%"}}>
+                                <div className='topLayeritemRight'> 
+                                    <IninewConvert/>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </motion.div>
+            </div>
+        );
+    }
+    let PageFlipView = () => {
+        return(
             <>
-                <div className="flexpaneldisplay" style={{height:"100%"}}>
-                    <div className='topLayeritemVidM flexpaneldisplay3'>
-                        <iframe src="https://player.vimeo.com/video/811032864?h=bb18723052"
-                            width="720" 
-                            height="405"
-                            style={{border:'none'}} 
-                        />
+                <div className="logobox">
+                    <div className='flexpaneldisplay'>
+                        <div className="apptextL">
+                            <h1>Please Turn To Portrait</h1>
+                        </div>
                     </div>
                 </div>
             </>
         );
     }
-    return(
-        <>
-            <div className="hamlink">
-                <BackLink/>
-            </div>
-            <div className="bkgcontainer">
-                <video autoPlay loop className='videobkg'>
-                    <source src="/webm/TeachBKGMobile.webm" type="video/webm; codecs=vp9"/>
-                </video>
-            </div>
-            <div className='appshell'>
-                <div className='teachpaneltopMT'>
-                    <ReturnView/>
-                    {activeTab === 2 && <DocView/>} 
-                    {activeTab === 4 && <SummaryView/>}
-                </div>
-                <div className='teachpanelbotMT flexpaneldisplay'>
-                    <div className='row1fr1fr flexpaneldisplay' style={{height:"100%",width:"100%"}}>
-                        <div className='flexpaneldisplay' style={{height:"100%"}}>
-                            <div className='topLayeritemRight'> 
-                                <PrayConvert/>
-                            </div>
-                        </div>
-                        <div className='flexpaneldisplay' style={{height:"100%"}}>
-                            <div className='topLayeritemRight'> 
-                                <button className={activeTab === 2 ? 'active' : ''} onClick={() => setActiveTab(2)}
-                                    style={{width: '100%', height: '100%'}}
-                                >
-                                    <div className="apptextB">
-                                        <h3>Introduction</h3>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                        <div className='flexpaneldisplay' style={{height:"100%"}}>
-                            <div className='topLayeritemRight'> 
-                                <IninewConvert/>
-                            </div>
-                        </div>
-                        <div className='flexpaneldisplay' style={{height:"100%"}}>
-                            <div className='topLayeritemRight'>
-                                <Link 
-                                    href={{
-                                        pathname: '/pages/MedicineJourneyM',
-                                        query: {keyword: KeywordSelect()}
-                                    }}
-                                    className="apptextB" 
-                                    style={{textDecoration:'none',width:"100%", height:"100%"}}
-                                >
-                                    <h3>Medicine Journey</h3>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-        </>
-    );
+    let FullPageView = () => {
+        if(width > 1024){
+            return <PageFlipView/>
+        }else{
+            return <PageView/>
+        }
+    }
+    return <FullPageView/>
 }
