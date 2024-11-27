@@ -28,7 +28,10 @@ const page = async ({ params }) => {
                                             height={100}
                                         />
                                         <div>
-                                            <Link className='apptext' style={{textDecoration:'none', height:"100%"}} href={'/pages/TeachingsM/teachmid/' +vid.id}>
+                                            <Link className='apptext' 
+                                                style={{textDecoration:'none',height:"100%"}} 
+                                                href={'/pages/TeachingsM/teachmid/' +vid.id}
+                                            >
                                                 <h3>{vid.title}</h3>
                                                 <h3>{vid.subtitle}</h3>
                                             </Link>
@@ -48,8 +51,6 @@ const page = async ({ params }) => {
             </div>   
         )
     }
-
-   
     return(
         <div>
             <div className="bklink">
